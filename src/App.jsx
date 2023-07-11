@@ -4,7 +4,9 @@ import Error from "./ui/Error";
 import AppLayout from "./ui/AppLayout";
 import Menu, { loader as menuLoader } from "./features/menu/Menu";
 import Cart from "./features/cart/Cart";
-import CreateOrder from "./features/order/CreateOrder";
+import CreateOrder, {
+  action as createOrderAction,
+} from "./features/order/CreateOrder";
 import Order, { loader as orderLoader } from "./features/order/Order";
 
 const router = createBrowserRouter([
@@ -29,6 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/order/new",
         element: <CreateOrder />,
+        action: createOrderAction, // Whenever there is a form submission, this action is called
       },
       {
         path: "/order/:orderId",
