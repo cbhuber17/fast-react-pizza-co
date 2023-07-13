@@ -40,6 +40,7 @@ const cartSlice = createSlice({
       item.quantity--;
       item.totalPrice = item.quantity * item.unitPrice;
 
+      // caseReducers - look slike when items is 0, call the deleteItem function in the cartSlice{reducers} above
       if (item.quantity === 0) cartSlice.caseReducers.deleteItem(state, action);
     },
     clearCart(state) {
