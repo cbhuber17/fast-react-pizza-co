@@ -87,6 +87,7 @@ const hashRouter = createHashRouter([
 ]);
 
 function App() {
+  console.log(my_env);
   if (my_env === "dev") return <RouterProvider router={router} />;
   if (my_env === "prod") return <RouterProvider router={hashRouter} />;
 }
