@@ -17,7 +17,6 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/", // Dev
-        // path: "/fast-react-pizza-co",  // GH Pages prod
         element: <Home />,
       },
       {
