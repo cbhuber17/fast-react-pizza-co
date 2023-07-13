@@ -14,7 +14,7 @@ import CreateOrder, {
 } from "./features/order/CreateOrder";
 import { action as updateOrderAction } from "./features/order/UpdateOrder";
 
-const my_env = import.meta.env.VITE_ENV;
+const my_env = import.meta.env.VITE_ENV || process.env.VITE_ENV;
 
 const router = createBrowserRouter([
   {
