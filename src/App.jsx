@@ -14,7 +14,7 @@ import CreateOrder, {
 } from "./features/order/CreateOrder";
 import { action as updateOrderAction } from "./features/order/UpdateOrder";
 
-const my_env = import.meta.env.VITE_ENV || process.env.VITE_ENV;
+// const my_env = import.meta.env.VITE_ENV || process.env.VITE_ENV;
 
 const router = createBrowserRouter([
   {
@@ -87,9 +87,10 @@ const hashRouter = createHashRouter([
 ]);
 
 function App() {
-  console.log(my_env);
-  if (my_env === "dev") return <RouterProvider router={router} />;
-  if (my_env === "prod") return <RouterProvider router={hashRouter} />;
+  // console.log(my_env);
+  // if (my_env === "dev") return <RouterProvider router={router} />;
+  // if (my_env === "prod") return <RouterProvider router={hashRouter} />;
+  return <RouterProvider router={hashRouter} />;
 }
 
 export default App;
