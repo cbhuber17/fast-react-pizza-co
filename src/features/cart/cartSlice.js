@@ -69,4 +69,4 @@ export const getTotalCartPrice = (state) =>
 export const getCurrentQuantityById = (id) => (state) =>
   state.cart.cart.find((item) => item.pizzaId === id)?.quantity ?? 0;
 
-// 'reselect'
+// 'reselect' library can be used to assist with performance optimization of these selectors.  Many selectors can cause performance issues.
